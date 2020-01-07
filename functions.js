@@ -64,3 +64,14 @@ function fillAllUncoloredCells() {
         uncoloredCells[i].classList.toggle("NoColor");
     }
 }
+
+// User Story No. 8 - fill all cells with the currently selected color
+function fillAllCells() {
+    let allCells = document.querySelectorAll("td");
+    for(let i = 0; i < allCells.length; i++){
+        allCells[i].style.backgroundColor = color;
+        if(allCells[i].classList.contains("NoColor")) {
+            allCells[i].classList.toggle("NoColor");
+        }
+    }
+}
