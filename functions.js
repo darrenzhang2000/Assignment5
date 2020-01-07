@@ -9,6 +9,7 @@ function addRow(){
     let newRow = document.createElement("tr");
     for(let i = 0; i < cols; i++){
         let newCol = document.createElement("td");
+        newCol.classList.add("NoColor");
         newRow.appendChild(newCol);
     }
     table.appendChild(newRow);
@@ -20,6 +21,7 @@ function addCol(){
     let rowsArray = Array.from(table.children);
     rowsArray.forEach((row) => {
         let newCell = document.createElement("td");
+        newCell.classList.add("NoColor");
         row.appendChild(newCell);
     })
     cols++;
@@ -44,3 +46,12 @@ function deleteCol(){
 function updateColor(){
     color = colorSelector.value;
 }
+
+// User Story No. 6 - click on a single cell, changing its color to the currently selected color
+table.addEventListener('click', function(event) {
+    let cell = event.target;
+    cell.style.backgroundColor = color;
+    if(cell.classList.contains("NoColor")) {
+        cell.classList.toggle("NoColor");
+    }
+})
