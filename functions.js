@@ -15,7 +15,7 @@ function addRow(){
 
 // add columns to the grid
 function addCol(){
-    let rowsArray = Array.from();
+    let rowsArray = Array.from(table.children);
     rowsArray.forEach((row) => {
         let newCell = document.createElement("td");
         row.appendChild(newCell);
