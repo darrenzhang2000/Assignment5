@@ -75,3 +75,14 @@ function fillAllCells() {
         }
     }
 }
+
+// User Story No. 9 - clear all cells/restore all cells to their original/initial color
+function clearAllCells() {
+    let allCells = document.querySelectorAll("td");
+    for(let i = 0; i < allCells.length; i++){
+        allCells[i].style.backgroundColor = "silver";
+        if(!allCells[i].classList.contains("NoColor")) {
+            allCells[i].classList.add("NoColor");
+        }
+    }
+}
