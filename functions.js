@@ -43,5 +43,4 @@ function deleteCol(){
 // User Story No. 5 - select a color from a dropdown menu of colors
 function updateColor(){
     color = colorSelector.value;
-    console.log(color);
 }
