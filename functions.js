@@ -55,3 +55,12 @@ table.addEventListener('click', function(event) {
         cell.classList.toggle("NoColor");
     }
 })
+
+// User Story No. 7 - fill all uncolored cells with the currently selected color
+function fillAllUncoloredCells() {
+    let uncoloredCells = document.querySelectorAll("td.NoColor");
+    for(let i = 0; i < uncoloredCells.length; i++){
+        uncoloredCells[i].style.backgroundColor = color;
+        uncoloredCells[i].classList.toggle("NoColor");
+    }
+}
