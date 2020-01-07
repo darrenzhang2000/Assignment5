@@ -7,10 +7,15 @@
 </head>
 <body>
     <div>
-        <button onclick="addRow()">Add Row</button>
-        <button onclick="addCol()">Add Column</button>
-        <button onclick="deleteRow()">Remove Row</button>
-        <button onclick="deleteCol()">Remove Column</button>
+        <button onclick="addRow()">Add Row</button> <!-- User Story No. 1-->
+        <button onclick="addCol()">Add Column</button> <!-- User Story No. 2-->
+        <button onclick="deleteRow()">Remove Row</button> <!-- User Story No. 3-->
+        <button onclick="deleteCol()">Remove Column</button> <!-- User Story No. 4-->
+        <select onchange="updateColor()" id="ColorSelection"> <!-- User Story No. 5-->
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
     </div>
 
 
